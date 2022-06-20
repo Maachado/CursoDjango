@@ -4,7 +4,10 @@ from django.http import HttpResponse
 
 
 def home(request):
-    return HttpResponse('HOME')
+    return render(request, 'recipes/home.html', context={
+        'name': 'Leonardo Machado',
+
+        })
 
 
 def sobre(request):
@@ -12,5 +15,5 @@ def sobre(request):
 
 
 def contato(request):
-    return HttpResponse('CONTATO')
+    return render(request, 'temp/temp.html')
 
